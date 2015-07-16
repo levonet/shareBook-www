@@ -1,0 +1,4 @@
+block('dumb').content()(
+	function(){
+    	return this.ctx.content || '&nbsp;';
+});
