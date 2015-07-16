@@ -1,0 +1,25 @@
+block('header').elem('logo')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                block: 'link',
+                mods: { pseudo: true, theme: 'islands' },
+                mix: { elem: 'popup' },
+                content: 'Сімферополь'
+            },
+            {
+                block: 'modal',
+                mods: { autoclosable: true, theme: 'islands' },
+                content: [
+                    {
+                        /* FIXIT: Замінити на блок search з фіксованою шириною */
+                        block: 'input',
+                        mods: { theme: 'islands', size: 'm', type: 'search' },
+                        placeholder: "Введіть назву населеного пункту"
+                    }
+                ]
+            }
+        ];
+    })
+);

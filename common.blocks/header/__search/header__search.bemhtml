@@ -1,0 +1,23 @@
+block('header').elem('search')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                /* FIXIT: Замінити на блок search з фіксованою шириною */
+                block: 'control-group',
+                content: [
+                    {
+                        block: 'input',
+                        mods: { theme: 'islands', size: 'm', type: 'search' },
+                        placeholder: "Введіть назву книги або ім'я автора"
+                    },
+                    {
+                        block: 'button',
+                        mods: { theme: 'islands', size: 'm' },
+                        text: 'Пошук'
+                    }
+                ]
+            }
+        ];
+    })
+);

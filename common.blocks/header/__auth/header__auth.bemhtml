@@ -1,0 +1,10 @@
+block('header').elem('auth')(
+    js()(true),
+    content()(function() {
+	   console.log('base');
+        return [
+            { elem: 'auth', elemMods: {'user': 'login'} },
+            applyNext()
+        ];
+    })
+);

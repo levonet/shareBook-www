@@ -1,0 +1,41 @@
+block('header').elem('auth').elemMod('user', 'login')(
+    content()(function() {
+        return [
+            {
+                block: 'link',
+                mods: { pseudo: true, theme: 'islands' },
+                mix: [ {elem: 'popup'} ],
+                content: 'Вхід'
+            }, {
+                block : 'popup',
+                mods : {theme: 'islands', target: 'anchor', autoclosable: true},
+                content: {
+                    block: 'menu',
+                    mods: { theme: 'islands', size : 'm' },
+                    content: [
+                        {
+                            block: 'menu-item',
+                            val: 'google',
+                            content: 'Google'
+                        },
+                        {
+                            block: 'menu-item',
+                            val: 'facebook',
+                            content: 'Facebook'
+                        },
+                        {
+                            block: 'menu-item',
+                            val: 'twitter',
+                            content: 'Twitter'
+                        },
+                        {
+                            block: 'menu-item',
+                            val: 'yandex',
+                            content: 'Yandex'
+                        }
+                    ]
+                }
+            }
+        ];
+    })
+);

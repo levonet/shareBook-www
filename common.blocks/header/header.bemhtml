@@ -1,0 +1,21 @@
+block('header')(
+    tag()('header'),
+    js()(true),
+    mix()({block: 'layout', mods: {type: 'sedecim'}}),
+    content()(function() {
+        return [
+            {
+                elem: 'logo',
+                mix: {block: 'layout', elem: 'col', mods: {size: 2}}
+            },
+            {
+                elem: 'search',
+                mix: {block: 'layout', elem: 'col', mods: {size: 9}}
+            },
+            {
+                elem: 'auth',
+                mix: {block: 'layout', elem: 'col', elemMods: {stretch: 5}}
+            }
+        ];
+    })
+)
