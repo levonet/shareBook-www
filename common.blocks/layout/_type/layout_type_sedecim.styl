@@ -1,0 +1,20 @@
+/* Міксин для генерації розмірів клітинок */
+generate-layout__col(modname,prefix,start,end)
+  for i in range(start, end)
+    .layout__col_{modname}_{i}
+      {prefix}width unit(44 + 64 * ( i - 1 ), px)
+
+generate-layout__stretch(start,end)
+  generate-layout__col('stretch','min-',start,end)
+  for i in range(start, end)
+    .layout__col_stretch_{i}
+      width 100%
+
+/* Відступи для кожної клітинки */
+.layout_type_sedecim
+  .layout__col
+    padding-right 10px
+    padding-left 10px
+  generate-layout__col('size','',1,10)
+  generate-layout__col('size','min-',1,10)
+  generate-layout__stretch(1,10)
