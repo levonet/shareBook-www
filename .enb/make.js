@@ -33,7 +33,10 @@ module.exports = function (config) {
             // css
             [require('enb-stylus/techs/css-stylus'), { target: '?.noprefix.css' }],
             // bemhtml
-            [require('enb-bemxjst/techs/bemhtml-old'), { devMode: process.env.BEMHTML_ENV === 'development' }],
+            [require('enb-bemxjst/techs/bemhtml'), {
+                devMode: process.env.BEMHTML_ENV === 'development',
+                compat: false
+            }],
             // client bemhtml
             [enbBemTechs.depsByTechToBemdecl, {
                 target: '?.bemhtml.bemdecl.js',
