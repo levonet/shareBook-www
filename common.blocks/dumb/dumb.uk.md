@@ -8,7 +8,7 @@ BEMJSON
 ```js
 {
     block: 'dumb', // ім'я блоку
-    content: 'Що-небудь'
+    content: 'Що-небудь' // вміст блоку
 }
 ```
 
