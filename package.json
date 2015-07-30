@@ -1,8 +1,11 @@
 {
-  "name": "shareBook-www",
-  "description": "BEM project",
+  "name": "books-www",
+  "description": "FrontEnd of Social Network for Sharing Books",
   "version": "0.0.0",
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/prosvita/books-www.git"
+  },
   "author": {
     "name": "Pavel Bashinsky",
     "email": "levonet@gmail.com"
